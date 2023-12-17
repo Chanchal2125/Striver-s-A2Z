@@ -1,0 +1,12 @@
+long long sumFirstN(long long n) {
+    // Write your code here.
+    long long sum = 0;
+
+    if(n == 0){
+        return 0;
+    }
+
+    sum += n + sumFirstN(n-1);
+
+    return sum;
+}
