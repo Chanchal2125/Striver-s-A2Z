@@ -1,0 +1,9 @@
+vector<string> printNTimes(int n) {
+
+	if(n == 0){
+        return {};
+    }
+	vector<string> p = printNTimes(n-1);
+	p.push_back("Coding Ninjas");
+	return p;
+}
