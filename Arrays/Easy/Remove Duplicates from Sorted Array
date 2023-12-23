@@ -1,0 +1,17 @@
+#include <bits/stdc++.h>
+
+int removeDuplicates(vector<int> &arr, int n) {
+	// Write your code here.
+	vector<int> b;
+
+	int m = arr[0];
+	b.push_back(m);
+	for(int i = 1; i < n; i++){
+		if(m != arr[i]){
+			m = arr[i];
+			b.push_back(m);
+		}
+	}
+	return b.size();
+	
+}
