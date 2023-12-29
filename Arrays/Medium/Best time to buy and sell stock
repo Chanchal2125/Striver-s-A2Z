@@ -1,0 +1,15 @@
+#include <bits/stdc++.h>
+
+int bestTimeToBuyAndSellStock(vector<int>&prices) {
+    // Write your code here.
+    int n = prices.size();
+    int c = INT_MIN;
+
+    for(int i = 0; i < n; i++){
+        for(int j = i + 1; j < n; j++){
+            c = max(c,prices[j] - prices[i]);
+        }
+    }
+    if(c < 0) return 0;
+    return c;
+}
