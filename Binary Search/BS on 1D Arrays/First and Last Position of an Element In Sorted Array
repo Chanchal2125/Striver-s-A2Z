@@ -1,0 +1,21 @@
+#include <bits/stdc++.h> 
+using namespace std;
+
+pair<int, int> firstAndLastPosition(vector<int>& arr, int n, int k)
+{
+    // Write your code here
+    long long int c = 0;
+    long long int x;
+
+    for(int i = 0; i < n; i++){
+        if(arr[i] == k){
+            if(c == 0)  x = i;
+            c += 1;
+        }
+    }
+    pair<long long int, long long int> ans;
+    if(c >= 1)   ans = make_pair(x,x+c-1);
+    else    ans = make_pair(-1,-1);
+    return ans;
+    
+    }
