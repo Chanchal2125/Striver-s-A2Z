@@ -1,0 +1,16 @@
+int missingK(vector < int > vec, int n, int k) {
+    // Write your code here.
+
+    int cnt = 0;
+    int tar = 1;
+    int i = 0;
+
+    while(k != cnt){
+        if(i < n && vec[i] == tar){
+            i++;
+        }
+        else cnt++;
+        tar++;
+    }
+    return tar-1;
+}
